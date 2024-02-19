@@ -1,5 +1,9 @@
 body {
     background-color: rgb(158, 202, 208) ;
+    font-family: 'Manrope', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
 }
 .title-main-page {
     font-size: 100px;
