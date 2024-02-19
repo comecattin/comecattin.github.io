@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(158, 202, 208) ;
+}
+.title-main-page {
+    font-size: 100px;
+    color: rgb(116, 76, 222);
+}
+
+.bodoni-moda-title {
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
