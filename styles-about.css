@@ -80,3 +80,13 @@ h1 {
     margin-left: 30px;
     text-align: center;
 }
+
+.education-list {
+    grid-row: 1/4;
+    grid-column: 2/4;
+}
+
+.education-logo {
+    grid-row: 4;
+    grid-column: 1/4;
+}
