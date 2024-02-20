@@ -1,39 +1,50 @@
 html, body, section {
     block-size: 100%;
-  }
-  
-  html {
+}
+
+html {
     -ms-scroll-snap-type: y mandatory;
-        scroll-snap-type: y mandatory;
-  }
-  
-  section {
+    scroll-snap-type: y mandatory;
+}
+
+section {
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  section:nth-of-type(even) {
+}
+
+section:nth-of-type(even) {
     color: black;
     background: rgb(239, 227, 207);
-  }
-  
-  section:nth-of-type(odd) {
+}
+
+section:nth-of-type(odd) {
     color: black;
     background: rgb(158, 202, 208);
-  }
-  
-  body {
+}
+
+body {
     margin: 0;
     font-family: 'Manrope', sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 200;
     font-size: 20pt;
-  }
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+a:hover{
+    color: #555;
+    font-weight: 600;
+}
+
 
 .profile-photo {
     border-radius: 100%;
