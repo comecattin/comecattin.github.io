@@ -78,7 +78,7 @@ nav {
     position: absolute;
     margin: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-30%);
     margin-left: 100px;
     border-left: 1.5px solid #333;
 }
