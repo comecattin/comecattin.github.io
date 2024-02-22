@@ -165,6 +165,13 @@ h3 {
 }
 
 
+.language {
+    font-weight: 600;
+}
+
+
+
+
 
 @media only screen and (max-width: 768px) {
     /* Adjustments for smaller screens */
