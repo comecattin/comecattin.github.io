@@ -163,3 +163,49 @@ h3 {
         transform: rotate(45deg) translate(20px, 20px);
     }
 }
+
+
+
+@media only screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    body {
+        font-size: 14pt;
+    }
+
+    h2 {
+        font-size: 16pt;
+    }
+
+    h3 {
+        font-size: 16pt;
+    }
+
+    
+    .container {
+        grid-template-columns: 1fr;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .button {
+        grid-row: 4;
+        grid-column: 1;
+    }
+    
+    .profile, .education-list, .education-logo, .experiences-title, .arrow-experiences {
+        grid-row: auto;
+        grid-column: auto;
+        text-align: center;
+    }
+    
+    .arrow {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(0%,-50%);
+    }
+
+    .experiences-title {
+        font-size: 30pt;
+    }
+}

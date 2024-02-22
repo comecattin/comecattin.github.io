@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "Elmonza";
+    src: url(fonts/ELMONZA.ttf);
+}
+
+
+
 body {
     background-color: rgb(158, 202, 208) ;
     font-family: 'Manrope', sans-serif;
@@ -17,9 +24,9 @@ body {
 }
 
 .bodoni-moda-title {
-    font-family: "Bodoni Moda", serif;
+    font-family: "Elmonza";
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: 200;
     font-style: normal;
   }
 .profile-photo {
@@ -85,4 +92,36 @@ a {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        height: auto;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 0 10px;
+    }
+
+    .line-1,
+    .line-1-2,
+    .line-2-column-1,
+    .line-2-column-2 {
+        grid-row: auto;
+        grid-column: auto;
+        margin-bottom: 0;
+    }
+
+    nav {
+        position: static;
+        margin: 20px 0;
+        border-left: none;
+        margin-top: 50px;
+    }
+
+    a {
+        padding: 10px;
+    }
 }
