@@ -205,11 +205,11 @@ nav {
     margin-left: 15%;
 }
 
-.poster-title {
+.poster-title, .project-title {
     grid-row: 1/3;
     grid-column: 1;
 }
-.poster-info {
+.poster-info, .project-info {
     grid-row: 1;
     grid-column: 2/4;
 }
@@ -224,6 +224,15 @@ nav {
     border-radius: 10px;
     text-align: center;
 }
+
+.project-logo {
+    grid-row: 2;
+    grid-column: 1;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
 
 
 
@@ -253,7 +262,7 @@ nav {
         grid-column: 1;
     }
     
-    .profile, .education-list, .education-logo, .experiences-title, .arrow-experiences {
+    .profile, .education-list, .education-logo, .experiences-title, .arrow-experiences, .project-logo {
         grid-row: auto;
         grid-column: auto;
         text-align: center;
