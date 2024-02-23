@@ -11,6 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav class="navigation-index">
+        <a href="about.html" class="navigation-link">About</a>
+        <a href="contact.html" class="navigation-link">Contact</a>
+        <a href="projects.html" class="navigation-link">Projects</a>
+        <a href="posters.html" class="navigation-link">Posters</a>
+        <a href="publications.html" class="navigation-link">Publications</a>
+    </nav>
     <section>
         <div class="container">
             <h1>About me</h1>
@@ -111,7 +118,7 @@
                 <li>Git</li>
                 <li>HPC</li>
             </ul>
-            <div class="education-logo">
+            <div class="education-logo" style="grid-column: 1/4;">
                 <img src="images/gitlab_logo.png" alt="GitLab logo" style="width: 20%; margin-right: 100px;">
                 <img src="images/github_logo.png" alt="GitHub logo" style="width: 20%;">
             </div>
@@ -151,13 +158,32 @@
         <div class="container">
             <h2>Languages</h2>
             <ul class="education-list">
-                <div class="language">English</div>
+                <h3 style="margin-top: 0px;">English</h3>
                 <li>C1 CAE qualification</li>
                 <li>2017 Participation to the <a href="https://cammun.org/">Cambridge University School Model United Nations</a></li>
-                <br>
-                <div class="language">Italian</div>
+                <h3>Italian</h3>
                 <li>Italian baccalaureate (B2)</li>
             </ul>
+        </div>
+    </section>
+    <section>
+        <div class="activities">
+            <h2 style="grid-column: 1; grid-row: 1; margin-left: 0;">Activities</h2>
+            <ul class="education-list" style="grid-column: 2;">
+                <h3 style="margin-top: 0;">Music</h3>
+                <li>Guitar</li>
+                <li>Ukulele</li>
+                <li>Piano</li>
+                <li>Mandolin</li>
+                <h3 style="margin-top: 40px;">Sports</h3>
+                <li>Fencing</li>
+                <li>Archery</li>
+                <li>Swimming</li>
+            </ul>
+            <div class="education-list" style="grid-column: 3; width: 50px;">
+                <h3 style="margin-top: 0;">Stays abroad</h3>
+                California, Toscana, Canada, England, Irland, Malta, Catalogna, Germany, Czech Republic
+            </div>
         </div>
     </section>
 </body>
