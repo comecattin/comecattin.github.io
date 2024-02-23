@@ -337,4 +337,22 @@ nav {
         width: 70pt;
         height: 40pt;
     }
+
+    .publication-list {
+        font-size: 12pt;
+    }
+    .publication-abstract {
+        line-height: 1.5em;
+        height: 3em;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%;
+        font-size: 12pt;
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .publication-info {
+        grid-row: 3;
+    }
 }
