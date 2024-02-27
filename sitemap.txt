@@ -1,6 +1,6 @@
-comecattin.github.io/index.html
-comecattin.github.io/about.html
-comecattin.github.io/contact.html
-comecattin.github.io/posters.html
-comecattin.github.io/projects.html
-comecattin.github.io/publications.html
+https://comecattin.github.io/index.html
+https://comecattin.github.io/about.html
+https://comecattin.github.io/contact.html
+https://comecattin.github.io/posters.html
+https://comecattin.github.io/projects.html
+https://comecattin.github.io/publications.html
