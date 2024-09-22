@@ -273,6 +273,15 @@ nav {
         font-size: 14pt;
     }
 
+    h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .title-page {
+        max-block-size: 100vh;
+    }
+
     h2, h3 {
         font-size: 16pt;
     }
@@ -354,5 +363,13 @@ nav {
 
     .publication-info {
         grid-row: 3;
+    }
+
+    .profile-photo {
+        grid-row: 1;
+        grid-column: 1;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 20vh;
     }
 }
