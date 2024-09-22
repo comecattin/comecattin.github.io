@@ -270,7 +270,7 @@ nav {
 @media only screen and (max-width: 768px) {
     /* Adjustments for smaller screens */
     body {
-        font-size: 14pt;
+        font-size: 4vw;
     }
 
     h1 {
@@ -315,24 +315,22 @@ nav {
     }
 
     nav {
-        position: fixed;
-        width: 75%;
-        height: 20px;
-        z-index: 100;
+        width: 90%;
+        height: auto;
         top: 10px;
-        left: 12%;
-        margin: 0;
-        display: flex;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0, 20px;
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: center;
         border-left: 0;
+        border-right: 0;
         border-bottom: 1.5px solid #333;
-        margin-bottom: 0;
+        
     }
 
     .navigation-link {
-        font-size: 10pt;
+        font-size: 3vw;
         margin-left: 5px;
         margin-right: 5px;
         margin-top: 0;
