@@ -37,7 +37,7 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 200;
-    font-size: 20pt;
+    font-size: 16pt;
 }
 
 a {
@@ -109,11 +109,30 @@ h2, h3 {
     grid-row: 1/4;
     grid-column: 2/4;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.education-list li {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
 }
 
 .education-logo {
-    grid-row: 4;
-    grid-column: 1/4;
+    grid-row: 2/4;
+    grid-column: 1;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .experiences-title {
@@ -173,13 +192,16 @@ h2, h3 {
     font-weight: 600;
 }
 
-.activities {
+.activities-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    margin-left: 30px;
-    margin-right: 30px;
-    text-align: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.activity-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 nav {
@@ -271,7 +293,16 @@ nav {
 @media only screen and (max-width: 768px) {
     /* Adjustments for smaller screens */
     body {
-        font-size: 14pt;
+        font-size: 3vw;
+    }
+
+    h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .title-page {
+        max-block-size: 100vh;
     }
 
     h2, h3 {
@@ -295,6 +326,19 @@ nav {
         text-align: center;
     }
 
+    .education-list {
+        gap: 5px;
+    }
+
+    .education-list li {
+        padding: 5px;
+    }
+
+    .education-logo {
+        grid-template-rows: none;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .arrow {
         position: relative;
         top: 50%;
@@ -307,24 +351,22 @@ nav {
     }
 
     nav {
-        position: fixed;
-        width: 75%;
-        height: 20px;
-        z-index: 100;
+        width: 90%;
+        height: auto;
         top: 10px;
-        left: 12%;
-        margin: 0;
-        display: flex;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0, 20px;
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: center;
         border-left: 0;
+        border-right: 0;
         border-bottom: 1.5px solid #333;
-        margin-bottom: 0;
+        
     }
 
     .navigation-link {
-        font-size: 10pt;
+        font-size: 3vw;
         margin-left: 5px;
         margin-right: 5px;
         margin-top: 0;
@@ -355,5 +397,13 @@ nav {
 
     .publication-info {
         grid-row: 3;
+    }
+
+    .profile-photo {
+        grid-row: 1;
+        grid-column: 1;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 20vh;
     }
 }
