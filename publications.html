@@ -34,6 +34,16 @@
             <h2 style="grid-row: 1; grid-column: 1/4;">Publications</h2>
             <ul class="publication-list">
                 <li>
+                    <a href="#mts-2025">
+                        Accelerating Molecular Dynamics Simulations with Foundation Neural Network Models using Multiple Time-Step and Distillation, Côme Cattin et al., arxiv, 2025
+                    </a>
+                </li>
+                <li>
+                    <a href="#heme-2025">
+                        Computational study of heme b595 to heme d electron transfer in E. coli cytochrome bd-I oxidase, Raaif Siddeeque, Baptiste Etcheverry, Côme Cattin et al., bioRxiv, 2025
+                    </a>
+                </li>
+                <li>
                     <a href="#cytochromes-2022">
                         Étude théorique des cofacteurs rédox des cytochromes bd, Côme Cattin, JPCE, 2022
                     </a>
@@ -47,6 +57,41 @@
             </ul>
         </div>
     </section>
+    <section>
+        <div class="container">
+            <h2 class="publication-title">
+                <a href="https://arxiv.org/abs/2510.06562" id="mts-2025">
+                    Accelerating Molecular Dynamics Simulations with Foundation Neural Network Models using Multiple Time-Step and Distillation
+                </a>
+                
+            </h2>
+            <h3 class="publication-info">
+                Côme Cattin Thomas Plé, Olivier Adjoua, Nicolaï Gouraud, Louis Lagardère, and Jean-Philip Piquemal, arxiv, 2025
+            </h3>
+            <p class="publication-abstract">
+                We present a strategy to accelerate molecular dynamics simulations using foundation neural network models. To do so, we apply a dual-level neural network multi- time-step (MTS) strategy where the target accurate potential is coupled to a simpler but faster model obtained via a distillation process. Thus, the 3.5 A-cutoff distilled model is sufficient to capture the fast varying forces, i.e. mainly bonded interactions, from the accurate potential allowing its use in a reversible reference system propagator algorithms (RESPA)-like formalism. The approach conserves accuracy, preserving both static and dynamical properties, while enabling to evaluate the costly model only every 3 to 6 fs depending on the system. Consequently, large simulation speedups over standard 1 fs integration are observed: 4-fold in homogeneous systems and 2.7-fold in large solvated proteins. Such a strategy is applicable to any neural network potential and reduces their performance gap with classical force fields.
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2 class="publication-title">
+                <a href="https://www.biorxiv.org/content/10.1101/2025.09.03.673948v1.abstract" id="heme-2025">
+                    Computational study of heme b595 to heme d electron transfer in E. coli cytochrome bd-I oxidase
+                </a>
+                
+            </h2>
+            <h3 class="publication-info">
+                Raaif Siddeeque, Baptiste Etcheverry, Côme Cattin, Jean Deviers, Frédéric Melin, Petra Hellwig, Fabien Cailliez, Aurélien de la Lande, bioRxiv, 2025
+            </h3>
+            <p class="publication-abstract">
+                Cytochrome bd is a distinctive family of terminal oxidases present in the respiratory chains of many prokaryotes. Despite its biological importance, the redox chemistry of these proteins remains poorly understood, largely due to the presence of two b-type hemes and one d-type heme. Here, we report the first computational study of inter-heme electron transfer in the cytochrome bd family. We performed 10 μs of molecular dynamics simulations of E. coli cytochrome bd-I embedded in realistic membranes, combined with quantum chemical calculations to estimate the thermodynamic parameters of electron transfer from heme b595 to heme d within the framework of Marcus theory. We further identify the respective contributions of the hemes, protein scaffold, lipid bilayer, water, and counterions to the driving force and reorganization energy. The inter-heme electronic coupling was calculated using the Projected Orbital Diabatization (POD) method in a hybrid Quantum Mechanics/Molecular Mechanics scheme and rationalized through electron transfer pathway analysis. This study provides fundamental insights into how electron transfer steps are orchestrated in the catalytic cycle of E. coli cytochrome bd-I.
+            </p>
+        </div>
+    </section>
+
+
+
     <section>
         <div class="container">
             <h2 class="publication-title">
