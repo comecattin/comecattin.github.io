@@ -9,11 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script src="screen-layout.js" defer></script>
 </head>
 <body>
-    <nav class="navigation-index">
+    <nav class="navigation-index" aria-label="Main navigation">
         <a href="index.html" class="navigation-link">Home</a>
-        <a href="about.html" class="navigation-link">About</a>
+        <a href="about.html" class="navigation-link" aria-current="page">About</a>
         <a href="contact.html" class="navigation-link">Contact</a>
         <a href="projects.html" class="navigation-link">Projects</a>
         <a href="posters.html" class="navigation-link">Posters</a>
@@ -45,6 +46,7 @@
                     <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>
                     PhD student in Computational and Theoretical Chemistry.
                     Development of hybrid potentials combining neural networks and physical laws, applied to biological systems.
+                </li>
                 <li>
                     2021 - 2024 <a href="ens-lyon.fr">École Normale Supérieure de Lyon</a> Master degree Sciences of Matter, Computational Physics and Chemistry.
                 </li>
@@ -56,9 +58,9 @@
                 </li>
             </ul>
             <div class="education-logo">
-                <img src="images/sorbonne_logo.png" alt="Sorbonne Université logo" style="width: 15vw;">
-                <img src="images/ens-logo.png" alt="ENS logo" style="width: 15vw;">
-                <img src="images/UniversiteParis-logo.png" alt="Université de Paris logo" style="width: 15vw;">
+                <img src="images/sorbonne_logo.png" alt="Sorbonne Université logo">
+                <img src="images/ens-logo.png" alt="ENS logo">
+                <img src="images/UniversiteParis-logo.png" alt="Université de Paris logo">
             </div>
         </div>
     </section>
@@ -93,9 +95,9 @@
                 </li>
             </ul>
             <div class="education-logo">
-                <img src="images/sorbonne_logo.png" alt="Sorbonne Université" style="width: 15vw">
-                <img src="images/qubit_logo.png" alt="Qubit Pharmaceuticals" style="width: 15vw">
-                <img src="images/ilm_logo.png" alt="Logo ILM" style="width: 15vw">
+                <img src="images/sorbonne_logo.png" alt="Sorbonne Université">
+                <img src="images/qubit_logo.png" alt="Qubit Pharmaceuticals">
+                <img src="images/ilm_logo.png" alt="Logo ILM">
             </div>
         </div>
     </section>
@@ -111,7 +113,7 @@
                 </li>
             </ul>
             <div class="education-logo">
-                <img src="images/ictp_logo.png" alt="Logo ICP" style="width: 15vw; grid-column: 1/4;">
+                <img src="images/ictp_logo.png" alt="Logo ICP">
             </div>
         </div>
     </section>
@@ -137,8 +139,8 @@
                 </li>
             </ul>
             <div class="education-logo">
-                <img src="images/max_planck_logo.png" alt="Max Planck Institute" style="width: 15vw; grid-column: 1;">
-                <img src="images/galway_logo.png" alt="University of Galway" style="width: 15vw; grid-column: 3;">
+                <img src="images/max_planck_logo.png" alt="Max Planck Institute">
+                <img src="images/galway_logo.png" alt="University of Galway">
             </div>
         </div>
     </section>
@@ -154,10 +156,10 @@
             </ul>
             <div class="education-logo">
                 <a href="https://gitlab.com/comecattin">
-                    <img src="images/gitlab_logo.png" alt="GitLab logo" style="width: 20vw; grid-column: 1;">
+                    <img src="images/gitlab_logo.png" alt="GitLab logo">
                 </a>
                 <a href="https://github.com/comecattin">
-                    <img src="images/github_logo.png" alt="GitHub logo" style="width: 20vw; grid-column: 4;">
+                    <img src="images/github_logo.png" alt="GitHub logo">
                 </a>
             </div>
             <div>
@@ -189,16 +191,17 @@
                 </li>
             </ul>
 
-            <div class="education-logo">
+            <div class="education-logo research-logos">
                 <a  href="https://scholar.google.com/citations?user=Z4gI3KAAAAAJ&hl=en">
-                    <img src="images/Google_Scholar_logo.svg" alt="Google Scholar logo" style="width: 10vw; grid-column: 1;">
+                    <img src="images/Google_Scholar_logo.svg" alt="Google Scholar logo">
                 </a>
                 <a href="https://orcid.org/0009-0005-3497-8095">
-                    <img src="images/orcid.logo.icon.svg" alt="ORCID logo" style="width: 10vw; grid-column: 2;">
+                    <img src="images/orcid.logo.icon.svg" alt="ORCID logo">
                 </a>
                 <a href="https://www.researchgate.net/profile/Come-Cattin">
-                    <img src="images/researchgate_logo.svg" alt="ResearchGate logo" style="width: 10vw; grid-column: 3;">
+                    <img src="images/researchgate_logo.svg" alt="ResearchGate logo">
                 </a>
+        </div>
         </div>
     </section>
     
@@ -236,11 +239,9 @@
         <div class="container">
             <h2>Languages</h2>
             <ul class="education-list">
-                <h3>English</h3>
-                <li>C1 CAE qualification</li>
+                <li><h3>English</h3>C1 CAE qualification</li>
                 <li>2017 Participation to the <a href="https://cammun.org/">Cambridge University School Model United Nations</a></li>
-                <h3>Italian</h3>
-                <li>Italian baccalaureate (B2)</li>
+                <li><h3>Italian</h3>Italian baccalaureate (B2)</li>
             </ul>
         </div>
     </section>
@@ -262,7 +263,7 @@
                 </li>
             </ul>
         <div class="education-logo">
-            <img src="images/california.jpeg" alt="Golden Gate Bridge, San Francisco", style="width: 20vw; border-radius: 20px; grid-column: 1/4;">
+            <img src="images/california.jpeg" alt="Golden Gate Bridge, San Francisco" class="activity-photo">
         </div>
         </div>
     </section>

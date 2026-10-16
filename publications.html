@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="-ms-scroll-snap-type: none; scroll-snap-type: none">
+<html lang="en">
 <head>
     <title>Côme Cattin - Publications</title>
     <meta charset="UTF-8">
@@ -9,52 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <style>
-        .publication-pdf {
-            grid-column: 1 / -1;
-            grid-row: 3;
-            justify-self: center;
-            margin-top: 16px;
-            padding: 10px 24px;
-            border: 1.5px solid #333;
-            border-radius: 10px;
-            font-size: 14pt;
-        }
-        .publication-pdf:hover, .publication-pdf:focus-visible {
-            background: #333;
-            color: white;
-        }
-        .publications-page section {
-            min-height: 100vh;
-            block-size: auto;
-            box-sizing: border-box;
-            padding: 60px 0;
-        }
-        .publications-page .publication-title { overflow-wrap: anywhere; }
-        @media only screen and (max-width: 768px) {
-            .publications-page .publication-title,
-            .publications-page .publication-info,
-            .publications-page .publication-abstract,
-            .publications-page .publication-pdf {
-                grid-column: 1 / -1;
-                grid-row: auto;
-            }
-            .publications-page .publication-abstract {
-                height: auto;
-                overflow: visible;
-                white-space: normal;
-            }
-        }
-    </style>
+    <script src="screen-layout.js" defer></script>
 </head>
 <body class="publications-page">
-    <nav class="navigation-index">
+    <nav class="navigation-index" aria-label="Main navigation">
         <a href="index.html" class="navigation-link">Home</a>
         <a href="about.html" class="navigation-link">About</a>
         <a href="contact.html" class="navigation-link">Contact</a>
         <a href="projects.html" class="navigation-link">Projects</a>
         <a href="posters.html" class="navigation-link">Posters</a>
-        <a href="publications.html" class="navigation-link">Publications</a>
+        <a href="publications.html" class="navigation-link" aria-current="page">Publications</a>
     </nav>
     <section>
         <div class="container">
@@ -68,7 +32,7 @@
     </section>
     <section>
         <div class="container">
-            <h2 style="grid-row: 1; grid-column: 1/4;">Publications</h2>
+            <h2 style="grid-column: 1 / -1;">Publications</h2>
             <ul class="publication-list">
                 <li>
                     <a href="#dmts-nc-2026">Faster Molecular Dynamics with Neural Network Potentials via Distilled Multiple Time-Stepping and Nonconservative Forces, Nicolaï Gouraud, Côme Cattin et al., Journal of Chemical Theory and Computation, 2026</a>
