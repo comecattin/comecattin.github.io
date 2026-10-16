@@ -11,11 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navigation-index">
+    <nav class="navigation-index" aria-label="Main navigation">
         <a href="index.html" class="navigation-link">Home</a>
         <a href="about.html" class="navigation-link">About</a>
         <a href="contact.html" class="navigation-link">Contact</a>
-        <a href="projects.html" class="navigation-link">Projects</a>
+        <a href="projects.html" class="navigation-link" aria-current="page">Projects</a>
         <a href="posters.html" class="navigation-link">Posters</a>
         <a href="publications.html" class="navigation-link">Publications</a>
     </nav>
@@ -35,7 +35,7 @@
             <p class="project-info">
                 YOCKO is a geometry optimization code based on quantum chemistry. It was developed with L. Pierrot Deseilligny using Python. This code using the Hartree-Fock method, was done within one week during the Numerical Analysis lecture at the ENS (M1). The code is available on GitHub.
             </p>
-            <div style="grid-row: 2; grid-column: 2/4;">
+            <div class="project-resources">
                 <img src="images/yocko_logo.png" alt="YOCKO Logo" class="project-logo">
                 <a href="https://github.com/comecattin/YOCKO" class="project-button">GitHub</a>
                 <a href="projects/yocko-presentation.pdf" class="project-button">Presentation</a>
@@ -49,7 +49,7 @@
             <p class="project-info">
                 This website has been created using HTML and CSS. The source code is available on the GitHub repository.
             </p>
-            <a href="https://github.com/comecattin/comecattin.github.io/" class="project-button" style="grid-column: 2/4;">GitHub</a>
+            <a href="https://github.com/comecattin/comecattin.github.io/" class="project-button">GitHub</a>
         </div>
     </section>
     <section>
@@ -58,8 +58,8 @@
             <p class="project-info">
                 F-MD is a molecular dynamics code based on the Lennard-Jones and Coulomb potential implemented using Fortran. It reproduce the TIP3P water model. The aim of this project was to learn to code in Fortran and to understand molecular dynamics methods. The code is available on GitHub.
             </p>
-            <div style="grid-row: 2; grid-column: 2/4;">
-                <img src="https://github.com/comecattin/F-MD/assets/75748278/1d46d2ed-7f07-4c99-9086-a80ddbaf25b5" alt="FMD logo", class="project-logo" style="border-radius: 10%;">
+            <div class="project-resources">
+                <img src="https://github.com/comecattin/F-MD/assets/75748278/1d46d2ed-7f07-4c99-9086-a80ddbaf25b5" alt="FMD logo" class="project-logo" style="border-radius: 10%;">
                 <a href="https://github.com/comecattin/F-MD" class="project-button">GitHub</a>
             </div>
         </div>
