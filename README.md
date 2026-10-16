@@ -8,7 +8,8 @@ It's build using HTML and CSS. You can find the online deployed version followin
 ## Responsive screen layout
 
 Compact layouts keep each section within a viewport and retain magnetic scroll
-snapping. `screen-layout.js` measures the available height after fonts and images
+snapping. Mobile navigation stays at the top, and each snap screen fits below it.
+`screen-layout.js` measures the available height after fonts and images
 load, and flows whole list entries or content blocks onto continuation screens
 when needed. It rebuilds from the original markup on resize, preserving entries
 and anchor IDs. Without JavaScript, the original sections remain readable.

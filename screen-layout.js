@@ -15,8 +15,8 @@
         sections.forEach((section, index) => { section.dataset.screenSource = index; });
         document.body.append(...sections);
         const screenHeight = document.documentElement.clientHeight;
-        const nav = document.querySelector('body > nav');
-        const navHeight = getComputedStyle(nav).position === 'static' ? nav.offsetHeight : 0;
+        const nav = document.querySelector('.navigation-index');
+        const navHeight = matchMedia('(max-width: 64rem)').matches ? nav.offsetHeight : 0;
         document.documentElement.style.setProperty('--screen-height', `${screenHeight}px`);
         document.documentElement.style.setProperty('--navigation-height', `${navHeight}px`);
         if (compact.matches) for (const section of sections) {
@@ -29,7 +29,7 @@
 
             const fits = () => {
                 const style = getComputedStyle(page);
-                const available = screenHeight - (page === sections[0] ? navHeight : 0)
+                const available = screenHeight - navHeight
                     - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom);
                 return content.getBoundingClientRect().height <= available + 1;
             };
