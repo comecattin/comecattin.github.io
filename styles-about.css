@@ -1,6 +1,6 @@
 /* Shared reading rhythm: 8px spacing scale, bounded text, fluid headings. */
 * { box-sizing: border-box; }
-html { scroll-padding-top: 2rem; }
+html { scroll-snap-type: y mandatory; }
 body { margin: 0; color: #262b2d; font-family: 'Manrope', sans-serif; font-size: 1.0625rem; font-weight: 400; line-height: 1.65; background: #9ecad0; }
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .2em; font-weight: 600; overflow-wrap: anywhere; }
 a:hover { color: #51328c; }
@@ -11,7 +11,9 @@ h1, h2, h3 { line-height: 1.2; font-weight: 600; overflow-wrap: anywhere; }
 h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); grid-column: 1 / -1; }
 h2, h3 { font-size: clamp(1.5rem, 2.4vw, 2rem); }
 p { max-width: 65ch; }
-section { padding: clamp(3rem, 7vw, 6rem) 2rem; margin-left: 11rem; }
+/* Minimum height preserves the screen-to-screen snap; long content can grow
+   beyond the viewport and remains freely scrollable within its section. */
+section { min-height: 100vh; min-height: 100svh; scroll-snap-align: start; scroll-snap-stop: always; display: flex; align-items: center; padding: clamp(3rem, 7vw, 6rem) 2rem; margin-left: 11rem; }
 section:nth-of-type(odd) { background: #9ecad0; }
 section:nth-of-type(even) { background: #efe3cf; }
 .container { width: min(100%, 70rem); margin-inline: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 2rem 3rem; align-items: start; }
@@ -51,7 +53,7 @@ nav { position: fixed; inset: 0 auto 0 0; width: 11rem; padding: 2rem 1rem; disp
 .social-links a { display: flex; flex-direction: column; align-items: flex-start; gap: .75rem; padding: 1rem; border-top: 1px solid #668d93; }
 .social-links img { width: 3rem; height: 3rem; object-fit: contain; }
 @media (max-width: 64rem) {
-    html { scroll-padding-top: 1.5rem; }
+    nav { scroll-snap-align: start; }
     nav { position: static; width: auto; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; padding: .75rem 1.5rem; border-right: 0; border-bottom: 1px solid #668d93; gap: .25rem; }
     .navigation-link[aria-current="page"] { border-left: 0; box-shadow: inset 0 -2px #51328c; }
     section { margin-left: 0; }
