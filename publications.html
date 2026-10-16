@@ -9,8 +9,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <style>
+        .publication-pdf {
+            grid-column: 1 / -1;
+            grid-row: 3;
+            justify-self: center;
+            margin-top: 16px;
+            padding: 10px 24px;
+            border: 1.5px solid #333;
+            border-radius: 10px;
+            font-size: 14pt;
+        }
+        .publication-pdf:hover, .publication-pdf:focus-visible {
+            background: #333;
+            color: white;
+        }
+        .publications-page section {
+            min-height: 100vh;
+            block-size: auto;
+            box-sizing: border-box;
+            padding: 60px 0;
+        }
+        .publications-page .publication-title { overflow-wrap: anywhere; }
+        @media only screen and (max-width: 768px) {
+            .publications-page .publication-title,
+            .publications-page .publication-info,
+            .publications-page .publication-abstract,
+            .publications-page .publication-pdf {
+                grid-column: 1 / -1;
+                grid-row: auto;
+            }
+            .publications-page .publication-abstract {
+                height: auto;
+                overflow: visible;
+                white-space: normal;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="publications-page">
     <nav class="navigation-index">
         <a href="index.html" class="navigation-link">Home</a>
         <a href="about.html" class="navigation-link">About</a>
@@ -34,23 +71,26 @@
             <h2 style="grid-row: 1; grid-column: 1/4;">Publications</h2>
             <ul class="publication-list">
                 <li>
+                    <a href="#dmts-nc-2026">Faster Molecular Dynamics with Neural Network Potentials via Distilled Multiple Time-Stepping and Nonconservative Forces, Nicolaï Gouraud, Côme Cattin et al., Journal of Chemical Theory and Computation, 2026</a>
+                </li>
+                <li>
                     <a href="#mts-2025">
-                        Accelerating Molecular Dynamics Simulations with Foundation Neural Network Models using Multiple Time-Step and Distillation, Côme Cattin et al., arxiv, 2025
+                        Accelerating Molecular Dynamics Simulations with Foundation Neural Network Models Using Multiple Time Steps and Distillation, Côme Cattin et al., The Journal of Physical Chemistry Letters, 2026, 17(5), 1288–1295
                     </a>
                 </li>
                 <li>
                     <a href="#heme-2025">
-                        Computational study of heme b595 to heme d electron transfer in E. coli cytochrome bd-I oxidase, Raaif Siddeeque, Baptiste Etcheverry, Côme Cattin et al., bioRxiv, 2025
+                        Computational Study of Heme b595 to Heme d Electron Transfer in E. coli Cytochrome bd-I Oxidase, Raaif Siddeeque, Baptiste Etcheverry, Côme Cattin et al., Journal of Chemical Information and Modeling, 2026, 66(3), 1757–1768
                     </a>
                 </li>
                 <li>
                     <a href="#cytochromes-2022">
-                        Étude théorique des cofacteurs rédox des cytochromes bd, Côme Cattin, JPCE, 2022
+                        Étude théorique des cofacteurs rédox des cytochromes bd, Côme Cattin, JPCE, 2022, no. 5, pp. 5–17
                     </a>
                 </li>
                 <li>
                     <a href="#iode-2021">
-                        L’iode : 210 ans de recherche au service de la société, Côme Cattin, Camille Chartier, Antoine Brunel, JPCE, 2021
+                        L’iode : 210 ans de recherche au service de la société, Antoine Brunel, Côme Cattin, Camille Chartier, JPCE, 2022, no. 5, pp. 18–30
                     </a>
                     
                 </li>
@@ -60,33 +100,47 @@
     <section>
         <div class="container">
             <h2 class="publication-title">
-                <a href="https://arxiv.org/abs/2510.06562" id="mts-2025">
-                    Accelerating Molecular Dynamics Simulations with Foundation Neural Network Models using Multiple Time-Step and Distillation
-                </a>
-                
+                <a href="https://doi.org/10.1021/acs.jctc.6c00653" id="dmts-nc-2026">Faster Molecular Dynamics with Neural Network Potentials via Distilled Multiple Time-Stepping and Nonconservative Forces</a>
             </h2>
-            <h3 class="publication-info">
-                Côme Cattin Thomas Plé, Olivier Adjoua, Nicolaï Gouraud, Louis Lagardère, and Jean-Philip Piquemal, arxiv, 2025
-            </h3>
+            <h3 class="publication-info">Nicolaï Gouraud, Côme Cattin, Thomas Plé, Olivier Adjoua, Louis Lagardère, and Jean-Philip Piquemal, Journal of Chemical Theory and Computation, 2026, 22(12), 5957–5967</h3>
             <p class="publication-abstract">
-                We present a strategy to accelerate molecular dynamics simulations using foundation neural network models. To do so, we apply a dual-level neural network multi- time-step (MTS) strategy where the target accurate potential is coupled to a simpler but faster model obtained via a distillation process. Thus, the 3.5 A-cutoff distilled model is sufficient to capture the fast varying forces, i.e. mainly bonded interactions, from the accurate potential allowing its use in a reversible reference system propagator algorithms (RESPA)-like formalism. The approach conserves accuracy, preserving both static and dynamical properties, while enabling to evaluate the costly model only every 3 to 6 fs depending on the system. Consequently, large simulation speedups over standard 1 fs integration are observed: 4-fold in homogeneous systems and 2.7-fold in large solvated proteins. Such a strategy is applicable to any neural network potential and reduces their performance gap with classical force fields.
+                This work extends distilled multiple time-stepping with nonconservative forces to accelerate molecular dynamics with neural network potentials. A fast distilled model handles short-time forces while a more accurate conservative model supplies corrections. Physical constraints improve robustness, and hydrogen mass repartitioning and increased hydrogen friction allow longer time steps. Tests with FeNNix-Bio1 and MACE-OFF23 demonstrate improved efficiency while maintaining simulation accuracy.
             </p>
+            <a class="publication-pdf" href="https://arxiv.org/pdf/2602.14975" aria-label="PDF: Faster Molecular Dynamics with Neural Network Potentials via Distilled Multiple Time-Stepping and Nonconservative Forces">PDF (arXiv preprint)</a>
         </div>
     </section>
     <section>
         <div class="container">
             <h2 class="publication-title">
-                <a href="https://www.biorxiv.org/content/10.1101/2025.09.03.673948v1.abstract" id="heme-2025">
-                    Computational study of heme b595 to heme d electron transfer in E. coli cytochrome bd-I oxidase
+                <a href="https://doi.org/10.1021/acs.jpclett.5c03720" id="mts-2025">
+                    Accelerating Molecular Dynamics Simulations with Foundation Neural Network Models Using Multiple Time Steps and Distillation
                 </a>
                 
             </h2>
             <h3 class="publication-info">
-                Raaif Siddeeque, Baptiste Etcheverry, Côme Cattin, Jean Deviers, Frédéric Melin, Petra Hellwig, Fabien Cailliez, Aurélien de la Lande, bioRxiv, 2025
+                Côme Cattin, Thomas Plé, Olivier Adjoua, Nicolaï Gouraud, Louis Lagardère, and Jean-Philip Piquemal, The Journal of Physical Chemistry Letters, 2026, 17(5), 1288–1295
+            </h3>
+            <p class="publication-abstract">
+                We present a strategy to accelerate molecular dynamics simulations using foundation neural network models. To do so, we apply a dual-level neural network multi-time-step (MTS) strategy where the target accurate potential is coupled to a simpler but faster model obtained via a distillation process. Thus, the 3.5 Å-cutoff distilled model is sufficient to capture the fast varying forces, i.e. mainly bonded interactions, from the accurate potential allowing its use in a reversible reference system propagator algorithms (RESPA)-like formalism. The approach conserves accuracy, preserving both static and dynamical properties, while enabling to evaluate the costly model only every 3 to 6 fs depending on the system. Consequently, large simulation speedups over standard 1 fs integration are observed: nearly 4-fold in homogeneous systems and 3-fold in large solvated proteins with active learning. Such a strategy is applicable to any neural network potential and reduces their performance gap with classical force fields.
+            </p>
+            <a class="publication-pdf" href="https://arxiv.org/pdf/2510.06562" aria-label="PDF: Accelerating Molecular Dynamics Simulations with Foundation Neural Network Models Using Multiple Time Steps and Distillation">PDF (arXiv preprint)</a>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2 class="publication-title">
+                <a href="https://doi.org/10.1021/acs.jcim.5c02194" id="heme-2025">
+                    Computational Study of Heme b595 to Heme d Electron Transfer in E. coli Cytochrome bd-I Oxidase
+                </a>
+                
+            </h2>
+            <h3 class="publication-info">
+                Raaif Siddeeque, Baptiste Etcheverry, Côme Cattin, Jean Deviers, Frédéric Mélin, Petra Hellwig, Fabien Cailliez, Aurélien de la Lande, Journal of Chemical Information and Modeling, 2026, 66(3), 1757–1768
             </h3>
             <p class="publication-abstract">
                 Cytochrome bd is a distinctive family of terminal oxidases present in the respiratory chains of many prokaryotes. Despite its biological importance, the redox chemistry of these proteins remains poorly understood, largely due to the presence of two b-type hemes and one d-type heme. Here, we report the first computational study of inter-heme electron transfer in the cytochrome bd family. We performed 10 μs of molecular dynamics simulations of E. coli cytochrome bd-I embedded in realistic membranes, combined with quantum chemical calculations to estimate the thermodynamic parameters of electron transfer from heme b595 to heme d within the framework of Marcus theory. We further identify the respective contributions of the hemes, protein scaffold, lipid bilayer, water, and counterions to the driving force and reorganization energy. The inter-heme electronic coupling was calculated using the Projected Orbital Diabatization (POD) method in a hybrid Quantum Mechanics/Molecular Mechanics scheme and rationalized through electron transfer pathway analysis. This study provides fundamental insights into how electron transfer steps are orchestrated in the catalytic cycle of E. coli cytochrome bd-I.
             </p>
+            <a class="publication-pdf" href="https://www.biorxiv.org/content/10.1101/2025.09.03.673948v1.full.pdf" aria-label="PDF: Computational Study of Heme b595 to Heme d Electron Transfer in E. coli Cytochrome bd-I Oxidase">PDF (bioRxiv preprint)</a>
         </div>
     </section>
 
@@ -95,32 +149,34 @@
     <section>
         <div class="container">
             <h2 class="publication-title">
-                <a href="publications/cytochromes.pdf" id="cytochromes-2022">
+                <a href="https://www.ens-lyon.fr/MasterSDM/sites/default/files/2022-03/DFT-full.pdf" id="cytochromes-2022">
                     Étude théorique des cofacteurs rédox des cytochromes bd
                 </a>
                 
             </h2>
             <h3 class="publication-info">
-                Côme Cattin, JPCE, 2022
+                Côme Cattin, JPCE, 2022, no. 5, pp. 5–17
             </h3>
             <p class="publication-abstract">
                 Les cytochromes bd sont des protéines impliquées dans le mécanisme de respiration cellulaire de nombreuses bactéries en environnement pauvre en dioxygène. Leur fonctionnement repose sur des transferts électroniques impliquant trois hèmes. L’étude des cofacteurs rédox des hèmes permet de mieux appréhender leurs propriétés et ainsi la fonction des cytochromes bd. Une approche à l’aide de la théorie de la fonctionnelle de la densité (DFT) a été utilisée au cours de ce stage de L3 au sein de l’équipe ThéoSim du laboratoire de l’ICP de l’Université Paris-Saclay. Dans une première partie, nous nous sommes attachés à déterminer les paramètres de calcul nécessaire à la méthode de la DFT (fonctionnelles, base, base auxiliaire…). Puis l’analyse de la stabilité des états de spin de chaque hème nous a conduit à l’optimisation de leur géométrie dans leur état fondamental. Enfin les propriétés rédox des hèmes en phase gazeuse ont été calculées puis examinées au regard des données expérimentales existantes.
             </p>
+            <a class="publication-pdf" href="https://www.ens-lyon.fr/MasterSDM/sites/default/files/2022-03/DFT-full.pdf" aria-label="PDF: Étude théorique des cofacteurs rédox des cytochromes bd">PDF (journal article)</a>
         </div>
     </section>
     <section>
         <div class="container">
             <h2 class="publication-title">
-                <a href="publications/iode.pdf" id="iode-2021">
+                <a href="https://www.ens-lyon.fr/MasterSDM/sites/default/files/2022-03/iode-full.pdf" id="iode-2021">
                     L’iode : 210 ans de recherche au service de la société
                 </a>
             </h2>
             <h3 class="publication-info">
-                Côme Cattin, Camille Chartier, Antoine Brunel, JPCE, 2021
+                Antoine Brunel, Côme Cattin, Camille Chartier, JPCE, 2022, no. 5, pp. 18–30
             </h3>
             <p class="publication-abstract">
                 Découvert par hasard au début du 19ème siècle, l’iode a rapidement fait l’objet de nombreuses recherches et applications qui n’ont cessé de croître au fil des années. Différent des autres halogènes, il se démarque par ses propriétés d’oxydoréduction, sa faible électronégativité, sa grande polarisabilité et son hypervalence. L’iode est présent au quotidien dans le sel de table, dans des colorants alimentaires et dans les lampes à halogène. Il joue un rôle clé en tant que catalyseur dans la production industrielle d’acide acétique. Il est aussi largement utilisé en chimie des solutions et sa couleur en solution fait de lui une espèce oxydoréductrice de choix. En synthèse organique, l’iodation des composés organiques présente un fort intérêt et les composés à base d’iode hypervalent sont utilisés pour leur propriété oxydante. En plus de ses propriétés antiseptiques et de son utilisation en radioprotection et en imagerie médicale, l’iode est un oligo-élément régulant les systèmes hormonaux. Les carences en iode restent un problème majeur de santé publique aujourd’hui.
             </p>
+            <a class="publication-pdf" href="https://www.ens-lyon.fr/MasterSDM/sites/default/files/2022-03/iode-full.pdf" aria-label="PDF: L’iode : 210 ans de recherche au service de la société">PDF (journal article)</a>
         </div>
     </section>
 </body>
