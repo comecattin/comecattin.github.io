@@ -121,3 +121,15 @@ nav { position: fixed; inset: 0 auto 0 0; width: 11rem; padding: 2rem 1rem; disp
     .social-links { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     .project-resources { grid-template-columns: repeat(3, minmax(0, max-content)); }
 }
+
+/* Keep each poster preview and its download together during compact pagination. */
+.poster-resources { grid-column: 2; grid-row: 2; display: grid; gap: 1rem; width: 100%; }
+.poster-availability { grid-column: 2; grid-row: 2; }
+.poster-preview { margin: 0; display: grid; gap: .5rem; }
+.poster-preview > a { display: block; width: fit-content; max-width: 100%; cursor: zoom-in; }
+.poster-preview img { display: block; width: auto; max-width: 100%; height: auto; max-height: 60svh; object-fit: contain; border: 1px solid #668d93; background: white; }
+.poster-preview figcaption { max-width: 55ch; font-size: .875rem; }
+.poster-resources .button-poster { grid-column: auto; grid-row: auto; }
+@media (max-width: 64rem), (max-height: 38rem) {
+    .poster-preview img { max-height: 45svh; }
+}
