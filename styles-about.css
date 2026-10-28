@@ -45,7 +45,9 @@ section[hidden] { display: none; }
 .button-poster, .project-button, .publication-pdf { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: .5rem 1rem; border: 1px solid rgba(81, 50, 140, .45); border-radius: .7rem; text-decoration: none; width: fit-content; max-width: 100%; }
 .button-poster:hover, .project-button:hover, .publication-pdf:hover { background: var(--purple); color: white; }
 .button-poster, .project-button, .project-resources { grid-column: 2; grid-row: 2; }
-.project-resources { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
+.container > .project-button, .project-resources { grid-column: 1 / -1; grid-row: 3; }
+.project-resources { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .75rem; }
+.project-button { justify-self: center; }
 .project-logo { width: clamp(10rem, 24vw, 20rem); max-height: 20rem; object-fit: contain; padding: .75rem; border: 1px solid rgba(255, 255, 255, .7); border-radius: 1.25rem; background: rgba(255, 255, 255, .5); box-shadow: 0 8px 24px rgba(49, 76, 77, .07); }
 .project-resources .project-logo { flex-basis: 100%; }
 .publication-list { grid-column: 1 / -1; max-width: 65ch; margin: 0; padding-left: 1.5rem; display: grid; gap: 1.5rem; }
@@ -85,6 +87,8 @@ section[hidden] { display: none; }
     .education-logo img { width: clamp(4rem, 20vw, 8rem); max-height: 7rem; }
     .education-logo .activity-photo { width: auto; max-height: 14rem; }
     .project-logo { width: min(65vw, 15rem); max-height: 12rem; }
+    .project-button { align-self: center; }
+    .project-resources { width: 100%; }
     .publication-info { font-size: .9375rem; }
     .publication-pdf { align-self: center; }
     .social-links { width: 100%; gap: .75rem; }
