@@ -24,6 +24,7 @@
     const status = controls.querySelector('.card-status');
     let current = 0;
     let touchStart = null;
+    let transitioning = false;
 
     function sectionForHash() {
         if (!location.hash) return -1;
@@ -44,10 +45,22 @@
     }
 
     function select(index, moveToTop) {
-        if (index < 0 || index >= sections.length || index === current) return;
-        current = index;
-        render();
-        if (moveToTop) window.scrollTo(0, 0);
+        if (transitioning || index < 0 || index >= sections.length || index === current) return;
+        const direction = index > current ? 1 : -1;
+        const outgoing = sections[current];
+        const finish = () => {
+            current = index;
+            document.documentElement.style.setProperty('--card-entry-offset', `${direction * 8}px`);
+            render();
+            if (moveToTop) window.scrollTo(0, 0);
+            transitioning = false;
+        };
+        if (moveToTop && mobile.matches && outgoing.animate && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            transitioning = true;
+            outgoing.animate([{ opacity: 1, transform: 'translateX(0)' }, { opacity: .7, transform: `translateX(${-direction * 8}px)` }], { duration: 120, easing: 'ease-in', fill: 'none' }).finished.then(finish, finish);
+        } else {
+            finish();
+        }
     }
 
     previous.addEventListener('click', () => select(current - 1, true));
