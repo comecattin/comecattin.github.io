@@ -75,6 +75,13 @@ section[hidden] { display: none; }
 .poster-preview figcaption { max-width: 55ch; font-size: .875rem; text-align: center; }
 .poster-resources .button-poster { grid-column: auto; grid-row: auto; }
 .card-controls { display: none; }
+.button a, .button-poster, .project-button, .publication-pdf, .card-controls button, .poster-preview img { transition: color .2s ease, background-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+@media (hover: hover) {
+    .button a:hover, .button-poster:hover, .project-button:hover, .publication-pdf:hover, .card-controls button:not(:disabled):hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(49, 76, 77, .14); }
+    .poster-preview a:hover img { box-shadow: 0 16px 34px rgba(49, 76, 77, .2); }
+}
+.button a:active, .button-poster:active, .project-button:active, .publication-pdf:active, .card-controls button:not(:disabled):active { color: var(--ink); background: rgba(81, 50, 140, .12); transform: translateY(1px); }
+.poster-preview a:active img { box-shadow: 0 5px 16px rgba(49, 76, 77, .16); }
 @media (max-width: 64rem) {
     nav { position: sticky; inset: 0 0 auto; width: auto; flex-direction: row; flex-wrap: wrap; justify-content: center; padding: .25rem .5rem; border-right: 0; border-bottom: 1px solid var(--line); gap: 0; }
     .navigation-link { flex: 1 1 auto; justify-content: center; padding: .5rem .375rem; }
@@ -113,4 +120,4 @@ section[hidden] { display: none; }
 }
 @keyframes card-enter { from { opacity: .7; transform: translateX(var(--card-entry-offset, 0px)); } to { opacity: 1; transform: translateX(0); } }
 @keyframes underline-in { from { text-decoration-color: transparent; } to { text-decoration-color: currentColor; } }
-@media (prefers-reduced-motion: reduce) { body::before, body::after, .arrow span, .navigation-link[aria-current="page"], .carousel-ready section:not([hidden]) { animation: none; } .navigation-link { transition: none; } }
+@media (prefers-reduced-motion: reduce) { body::before, body::after, .arrow span, .navigation-link[aria-current="page"], .carousel-ready section:not([hidden]) { animation: none; } .navigation-link, .button a, .button-poster, .project-button, .publication-pdf, .card-controls button, .poster-preview img { transition: none; } .button a:hover, .button-poster:hover, .project-button:hover, .publication-pdf:hover, .card-controls button:hover, .button a:active, .button-poster:active, .project-button:active, .publication-pdf:active, .card-controls button:active { transform: none; } }
