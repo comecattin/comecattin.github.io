@@ -1,5 +1,13 @@
 /* Measure the header and progressively enhance mobile sections as a carousel. */
 (() => {
+    if (document.body.classList.contains('home-page') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        try {
+            if (!sessionStorage.getItem('home-intro-seen')) {
+                document.body.classList.add('home-intro');
+                sessionStorage.setItem('home-intro-seen', '1');
+            }
+        } catch (_) { /* The page remains fully visible if storage is unavailable. */ }
+    }
     const nav = document.querySelector('.navigation-index');
     const compactNavigation = matchMedia('(max-width: 64rem)');
     const mobile = matchMedia('(max-width: 48rem)');

@@ -9,6 +9,12 @@ body > .container::before { content: ''; position: absolute; inset: 0; z-index: 
 .line-2-column-2 { grid-column: 2; display: grid; gap: 1rem; }
 .subtitle-main-page { font-size: clamp(1.5rem, 2.5vw, 2rem); }
 .profile-photo { display: block; width: 100%; max-width: 26rem; }
+.home-intro > .container { animation: home-card-in .55s ease-out both; }
+.home-intro .line-1 { animation: home-content-in .45s .1s ease-out both; }
+.home-intro .line-2-column-1, .home-intro .line-2-column-2 { animation: home-content-in .45s .2s ease-out both; }
+@keyframes home-card-in { from { opacity: .85; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes home-content-in { from { opacity: .8; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .home-intro > .container, .home-intro .line-1, .home-intro .line-2-column-1, .home-intro .line-2-column-2 { animation: none; } }
 @media (max-width: 64rem) {
     body { display: block; padding: 0 0 1rem; }
     body > .container { width: auto; margin: 1.5rem 1rem 0; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); }
