@@ -49,8 +49,8 @@ body { min-height: 100svh; display: flex; align-items: center; padding: clamp(1.
 @media (max-width: 64rem) {
     body { padding-top: calc(var(--navigation-height, 7.5rem) + 1rem); }
     .line-1-2 { display: contents; }
-    .navigation-index { position: fixed; inset: 0 0 auto; z-index: 100; flex-direction: row; flex-wrap: wrap; gap: .25rem; padding: .75rem 1rem; background: #9ecad0; border: 0; border-bottom: 1px solid #668d93; }
-    .navigation-index a { padding: .5rem .625rem; }
+    .navigation-index { position: fixed; inset: 0 0 auto; z-index: 100; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0; padding: .25rem .5rem; background: #9ecad0; border: 0; border-bottom: 1px solid #668d93; }
+    .navigation-index a { flex: 1 1 auto; justify-content: center; padding: .5rem .375rem; }
 }
 @media (min-width: 48.001rem) and (max-width: 64rem) {
     .container { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); }
