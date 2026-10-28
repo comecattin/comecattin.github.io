@@ -20,7 +20,7 @@ p { max-width: 65ch; }
 nav { position: fixed; inset: 0 auto 0 0; width: 11rem; padding: 2rem 1rem; display: flex; flex-direction: column; justify-content: center; background: rgba(210, 232, 229, .75); border-right: 1px solid var(--line); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); z-index: 10; }
 .navigation-link { display: flex; align-items: center; min-height: 44px; padding: .5rem .75rem; border-radius: .5rem; font-size: 1rem; text-decoration: none; font-weight: 500; transition: color .2s ease, background-color .2s ease; }
 .navigation-link:active { background: rgba(81, 50, 140, .1); }
-.navigation-link[aria-current="page"] { border-left: 3px solid var(--purple); color: var(--purple); font-weight: 700; }
+.navigation-link[aria-current="page"] { border-left: 3px solid var(--purple); border-radius: 0; color: var(--purple); font-weight: 700; }
 section { margin: 1.5rem 1.5rem 1.5rem 12.5rem; min-height: min(42rem, calc(100vh - 3rem)); display: flex; align-items: center; padding: clamp(2rem, 5vw, 5rem); border: 1px solid rgba(255, 255, 255, .72); border-radius: 1.75rem; background: rgba(255, 255, 255, .48); box-shadow: 0 18px 60px rgba(49, 76, 77, .08), inset 0 1px rgba(255, 255, 255, .6); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
 section:nth-of-type(even) { background: rgba(255, 249, 240, .55); }
 section[hidden] { display: none; }
@@ -85,7 +85,7 @@ section[hidden] { display: none; }
 @media (max-width: 64rem) {
     nav { position: sticky; inset: 0 0 auto; width: auto; flex-direction: row; flex-wrap: wrap; justify-content: center; padding: .25rem .5rem; border-right: 0; border-bottom: 1px solid var(--line); gap: 0; }
     .navigation-link { flex: 1 1 auto; justify-content: center; padding: .5rem .375rem; }
-    .navigation-link[aria-current="page"] { border-left: 0; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .25em; animation: underline-in .4s ease-out both; }
+    .navigation-link[aria-current="page"] { border-left: 0; border-radius: .5rem; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .25em; animation: underline-in .4s ease-out both; }
     section { margin: 1rem; min-height: calc(100svh - var(--navigation-height, 0px) - 2rem); padding: clamp(1.5rem, 5vw, 3rem); }
 }
 @media (max-width: 48rem) {
