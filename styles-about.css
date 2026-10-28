@@ -20,7 +20,7 @@ section:nth-of-type(even) { background: rgba(255, 249, 240, .55); }
 section[hidden] { display: none; }
 .container { width: min(100%, 70rem); margin-inline: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 2rem 3rem; align-items: start; }
 .container > * { min-width: 0; }
-.profile-photo { grid-column: 1; grid-row: 2; width: min(100%, 24rem); aspect-ratio: 1; object-fit: cover; border-radius: 1.5rem; border: 1px solid rgba(255, 255, 255, .75); box-shadow: 0 12px 30px rgba(49, 76, 77, .12); }
+.profile-photo { grid-column: 1; grid-row: 2; width: min(100%, 24rem); aspect-ratio: 1; object-fit: cover; border-radius: 50%; border: 1px solid rgba(255, 255, 255, .75); box-shadow: 0 12px 30px rgba(49, 76, 77, .12); }
 .profile { grid-column: 2; grid-row: 2 / 4; display: grid; gap: 1rem; }
 .button { grid-column: 1; grid-row: 3; }
 .button a { display: inline-flex; align-items: center; min-height: 44px; }
