@@ -52,7 +52,7 @@ section[hidden] { display: none; }
 .publication-title { grid-column: 1; grid-row: 1; font-size: clamp(1.5rem, 2.3vw, 2rem); }
 .publication-info { grid-column: 1; grid-row: 2; font-size: 1rem; line-height: 1.6; font-weight: 500; }
 .publication-abstract { grid-column: 2; grid-row: 1 / 3; }
-.publication-pdf { grid-column: 1 / -1; grid-row: 3; justify-self: start; }
+.publication-pdf { grid-column: 1 / -1; grid-row: 3; justify-self: center; }
 .contact-container { max-width: 48rem; grid-template-columns: 1fr; }
 .contact-email { overflow-wrap: anywhere; }
 .social-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
@@ -86,6 +86,7 @@ section[hidden] { display: none; }
     .education-logo .activity-photo { width: auto; max-height: 14rem; }
     .project-logo { width: min(65vw, 15rem); max-height: 12rem; }
     .publication-info { font-size: .9375rem; }
+    .publication-pdf { align-self: center; }
     .social-links { width: 100%; gap: .75rem; }
     .social-links a { padding: .75rem; gap: .5rem; }
     .social-links img { width: 3rem; height: 3rem; }
