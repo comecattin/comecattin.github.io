@@ -61,12 +61,12 @@ section[hidden] { display: none; }
 .social-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .social-links a { display: flex; flex-direction: column; align-items: flex-start; gap: .75rem; padding: 1rem; border: 1px solid var(--line); border-radius: 1rem; background: rgba(255, 255, 255, .3); }
 .social-links img { width: clamp(3rem, 8vw, 5rem); height: clamp(3rem, 8vw, 5rem); object-fit: contain; border-radius: .75rem; }
-.poster-resources { grid-column: 2; grid-row: 2; display: grid; gap: 1rem; width: 100%; }
+.poster-resources { grid-column: 1 / -1; grid-row: 3; display: grid; justify-items: center; gap: 1rem; width: 100%; }
 .poster-availability { grid-column: 2; grid-row: 2; }
-.poster-preview { margin: 0; display: grid; gap: .5rem; }
+.poster-preview { margin: 0; display: grid; justify-items: center; gap: .5rem; }
 .poster-preview > a { display: block; width: fit-content; max-width: 100%; border-radius: 1rem; cursor: zoom-in; }
 .poster-preview img { display: block; width: auto; max-width: 100%; height: auto; max-height: 60svh; object-fit: contain; border: 1px solid rgba(255, 255, 255, .8); border-radius: 1rem; background: white; box-shadow: 0 12px 30px rgba(49, 76, 77, .12); }
-.poster-preview figcaption { max-width: 55ch; font-size: .875rem; }
+.poster-preview figcaption { max-width: 55ch; font-size: .875rem; text-align: center; }
 .poster-resources .button-poster { grid-column: auto; grid-row: auto; }
 .card-controls { display: none; }
 @media (max-width: 64rem) {
